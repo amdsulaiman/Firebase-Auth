@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ePT-qw-gqb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="mSN-Ja-PTS">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" id="Yvz-yk-9mc" customClass="SignUpViewController" customModule="MyFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QQF-7r-scr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="85x-qc-4XU">
+                                <rect key="frame" x="32" y="81" width="350" height="350"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FirstName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aeb-Fr-3ka">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LastName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wkh-JK-xJN">
+                                        <rect key="frame" x="0.0" y="63.5" width="350" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EmailID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HHS-W7-9Mu">
+                                        <rect key="frame" x="0.0" y="126.5" width="350" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPV-dH-b6g">
+                                        <rect key="frame" x="0.0" y="190" width="350" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRg-cd-Wqc">
+                                        <rect key="frame" x="0.0" y="253.5" width="350" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="SIGN UP"/>
+                                        <connections>
+                                            <action selector="onClickSignUp:" destination="Yvz-yk-9mc" eventType="touchUpInside" id="KbH-v3-KTd"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="VBM-j3-UDc"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRe-U1-elH">
+                                        <rect key="frame" x="0.0" y="316.5" width="350" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="fOk-GJ-aQ5"/>
+                                    <constraint firstAttribute="width" constant="350" id="yQi-KT-1kQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8dn-KJ-M9s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="85x-qc-4XU" firstAttribute="centerX" secondItem="QQF-7r-scr" secondAttribute="centerX" id="Ecu-6S-6bD"/>
+                            <constraint firstItem="8dn-KJ-M9s" firstAttribute="bottom" secondItem="85x-qc-4XU" secondAttribute="bottom" constant="431" id="oHN-qa-I2U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EKg-Cz-oQY"/>
+                    <connections>
+                        <outlet property="emailIP" destination="HHS-W7-9Mu" id="bAg-CA-wOd"/>
+                        <outlet property="errorLabel" destination="cRe-U1-elH" id="UHo-S6-CHy"/>
+                        <outlet property="firstNameIP" destination="aeb-Fr-3ka" id="DFG-28-Cgh"/>
+                        <outlet property="lastNameIP" destination="wkh-JK-xJN" id="F4f-bX-GKX"/>
+                        <outlet property="passwordIP" destination="EPV-dH-b6g" id="Hee-Lj-sxB"/>
+                        <outlet property="signUpBtnRef" destination="xRg-cd-Wqc" id="TKI-t7-L29"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulT-bO-EA5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1055.072463768116" y="-694.41964285714278"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="RyZ-wK-uxs">
+            <objects>
+                <viewController storyboardIdentifier="SignInViewController" id="UsM-pk-Vg5" customClass="SignInViewController" customModule="MyFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="znQ-ch-xNI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NYw-eh-szD">
+                                <rect key="frame" x="32" y="82" width="350" height="250"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EmailID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdH-nb-BI9">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="47.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xbc-EP-PpG">
+                                        <rect key="frame" x="0.0" y="67.5" width="350" height="47.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbA-HG-Ghw">
+                                        <rect key="frame" x="0.0" y="135" width="350" height="47.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="SIGN IN"/>
+                                        <connections>
+                                            <action selector="onClicKSignIn:" destination="UsM-pk-Vg5" eventType="touchUpInside" id="tp6-Mh-m9B"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="TFv-We-1Gm"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucr-g5-lzF">
+                                        <rect key="frame" x="0.0" y="202.5" width="350" height="47.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="fqz-A3-lZn"/>
+                                    <constraint firstAttribute="width" constant="350" id="qrn-xs-4lR"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RbH-oU-JjH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NYw-eh-szD" firstAttribute="centerX" secondItem="znQ-ch-xNI" secondAttribute="centerX" id="CeQ-8W-tk7"/>
+                            <constraint firstItem="RbH-oU-JjH" firstAttribute="bottom" secondItem="NYw-eh-szD" secondAttribute="bottom" constant="530" id="mhK-Sh-wI9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5q3-Li-Y2m"/>
+                    <connections>
+                        <outlet property="emailIp" destination="mdH-nb-BI9" id="Q6g-DQ-DMJ"/>
+                        <outlet property="errorLabel" destination="ucr-g5-lzF" id="ePs-Do-ca0"/>
+                        <outlet property="passwordIP" destination="Xbc-EP-PpG" id="46D-Nb-ica"/>
+                        <outlet property="signInRefBtn" destination="nbA-HG-Ghw" id="ABu-ek-zUo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SEE-C1-7uM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360.86956521739131" y="-694.41964285714278"/>
+        </scene>
+        <!--Main Home View Controller-->
+        <scene sceneID="3ts-Ah-RDu">
+            <objects>
+                <viewController storyboardIdentifier="MainHomeViewController" id="mRw-hI-cZv" customClass="MainHomeViewController" customModule="MyFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QRF-hA-kau">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="158" translatesAutoresizingMaskIntoConstraints="NO" id="VZA-N0-g5R">
+                                <rect key="frame" x="32" y="285" width="350" height="521"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo firebase icon" translatesAutoresizingMaskIntoConstraints="NO" id="K8D-k2-Dfj">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="237"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="EuM-PC-iTE">
+                                        <rect key="frame" x="0.0" y="395" width="350" height="126"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgt-LG-5NR">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
+                                                <color key="backgroundColor" systemColor="labelColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="IYi-JD-bn1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="SIGN UP">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onClickSignUP:" destination="mRw-hI-cZv" eventType="touchUpInside" id="Ju7-js-puj"/>
+                                                    <segue destination="Yvz-yk-9mc" kind="presentation" modalPresentationStyle="fullScreen" id="Md1-B9-qNe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeQ-9a-Zcc">
+                                                <rect key="frame" x="0.0" y="76" width="350" height="50"/>
+                                                <color key="backgroundColor" systemColor="labelColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="rou-yP-FpB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="LOGIN">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onClickSignIN:" destination="mRw-hI-cZv" eventType="touchUpInside" id="PD3-jN-p14"/>
+                                                    <segue destination="UsM-pk-Vg5" kind="presentation" modalPresentationStyle="fullScreen" id="fvN-ud-NRh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="jZM-jY-STg"/>
+                                            <constraint firstAttribute="height" constant="126" id="urj-fx-4Sh"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="521" id="a0v-Or-ac4"/>
+                                    <constraint firstAttribute="width" constant="350" id="bSF-zP-t3h"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4OG-KK-N7s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VZA-N0-g5R" firstAttribute="centerX" secondItem="QRF-hA-kau" secondAttribute="centerX" id="8Cv-sY-lfN"/>
+                            <constraint firstItem="4OG-KK-N7s" firstAttribute="bottom" secondItem="VZA-N0-g5R" secondAttribute="bottom" constant="56" id="BQo-Wv-hex"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hXX-fA-Nrj"/>
+                    <connections>
+                        <outlet property="logoImage" destination="K8D-k2-Dfj" id="YZp-DS-5Bd"/>
+                        <outlet property="signInBtnRef" destination="VeQ-9a-Zcc" id="zgd-PA-ZL9"/>
+                        <outlet property="signUpBtnRef" destination="qgt-LG-5NR" id="9e6-dQ-y3X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHF-qj-EN2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628.98550724637687" y="-1353.3482142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="OP5-g4-85T">
+                                <rect key="frame" x="29" y="336" width="356" height="456"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yYW-XO-c4q">
+                                        <rect key="frame" x="0.0" y="0.0" width="356" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxM-Fh-3IE" customClass="RoundButton" customModule="MyFirebase" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="GuW-e4-KJJ"/>
+                                                    <constraint firstAttribute="height" constant="80" id="vah-oo-oCi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K1V-vP-vLm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02u-bv-aUH" customClass="RoundButton" customModule="MyFirebase" customModuleProvider="target">
+                                                <rect key="frame" x="138" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="ZyY-1q-tba"/>
+                                                    <constraint firstAttribute="height" constant="80" id="vwR-jL-29M"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wuz-dt-RYT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bK-PX-Lcy" customClass="RoundButton" customModule="MyFirebase" customModuleProvider="target">
+                                                <rect key="frame" x="276" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="KKu-Qx-3k9"/>
+                                                    <constraint firstAttribute="width" constant="80" id="y8Q-6X-fmO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aZw-Pz-P0e"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="356" id="d0U-Ec-0Wx"/>
+                                            <constraint firstAttribute="height" constant="80" id="qoV-Qf-aa7"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="5Ia-hy-OlF">
+                                        <rect key="frame" x="0.0" y="125.5" width="356" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U60-XG-QVu" customClass="RoundButton" customModule="MyFirebase" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="8Rw-E2-Tup"/>
+                                                    <constraint firstAttribute="height" constant="80" id="Jc7-25-tlc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kh5-Uv-con"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ij5-04-zIV" customClass="RoundButton" customModule="MyFirebase" customModuleProvider="target">
+                                                <rect key="frame" x="138" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="LVF-Wr-JtG"/>
+                                                    <constraint firstAttribute="width" constant="80" id="ee4-hj-ON7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TZg-Pv-4Pp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0AY-gu-fqx" customClass="RoundButton" customModule="MyFirebase" customModuleProvider="target">
+                                                <rect key="frame" x="276" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="Ifk-zc-nVC"/>
+                                                    <constraint firstAttribute="height" constant="80" id="Sxe-NI-Sj9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdt-5m-q85"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="2hO-ln-l4q"/>
+                                            <constraint firstAttribute="width" constant="356" id="PGK-8h-SqO"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="MpC-GN-Vx3">
+                                        <rect key="frame" x="0.0" y="250.5" width="356" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kE-DR-cpU" customClass="RoundButton" customModule="MyFirebase" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="d0C-08-sfG"/>
+                                                    <constraint firstAttribute="height" constant="80" id="oWu-9G-s2O"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SrB-Hn-anm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLp-3h-81x" customClass="RoundButton" customModule="MyFirebase" customModuleProvider="target">
+                                                <rect key="frame" x="138" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="bac-0l-EiC"/>
+                                                    <constraint firstAttribute="width" constant="80" id="th4-36-v1s"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tZM-MW-CDi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezu-nA-yNj" customClass="RoundButton" customModule="MyFirebase" customModuleProvider="target">
+                                                <rect key="frame" x="276" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="616-W5-kEN"/>
+                                                    <constraint firstAttribute="width" constant="80" id="DZ5-PD-I0G"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cc5-Ez-JOS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="356" id="Gn1-el-5D4"/>
+                                            <constraint firstAttribute="height" constant="80" id="gas-Wt-9HK"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="Aa6-Us-Fcw">
+                                        <rect key="frame" x="138" y="376" width="218" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGh-DQ-pVD" customClass="RoundButton" customModule="MyFirebase" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="jK4-lD-ieh"/>
+                                                    <constraint firstAttribute="height" constant="80" id="mR7-XY-9LS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZyS-6u-XH0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKT-Zu-pB4" customClass="RoundButton" customModule="MyFirebase" customModuleProvider="target">
+                                                <rect key="frame" x="138" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="WjU-F7-BxL"/>
+                                                    <constraint firstAttribute="width" constant="80" id="vld-CX-OOx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="DEL">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickDel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D3A-1i-RmY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="456" id="889-sd-Yg1"/>
+                                    <constraint firstAttribute="width" constant="356" id="r9l-Je-yih"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Pin to Continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rr5-ZJ-OEp">
+                                <rect key="frame" x="29" y="105" width="356" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="607-0c-T9V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2BK-he-oLh">
+                                <rect key="frame" x="29" y="172" width="356" height="61"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="CqY-DS-5Op"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2BK-he-oLh" secondAttribute="trailing" constant="29" id="Hf1-qG-pNn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OP5-g4-85T" secondAttribute="bottom" constant="70" id="PF8-Hb-fCU"/>
+                            <constraint firstItem="Rr5-ZJ-OEp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="QCd-ug-bUV"/>
+                            <constraint firstItem="Rr5-ZJ-OEp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="UD7-zK-C4p"/>
+                            <constraint firstItem="2BK-he-oLh" firstAttribute="top" secondItem="Rr5-ZJ-OEp" secondAttribute="bottom" constant="29" id="eWD-vQ-46y"/>
+                            <constraint firstItem="Rr5-ZJ-OEp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gjh-6P-WIg"/>
+                            <constraint firstItem="OP5-g4-85T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m7D-hB-hDQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rr5-ZJ-OEp" secondAttribute="trailing" constant="29" id="oK7-74-XbP"/>
+                            <constraint firstItem="2BK-he-oLh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="x7i-I5-d6Y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="f9f-V1-fhk"/>
+                    <connections>
+                        <outlet property="InputPin" destination="2BK-he-oLh" id="hNW-Aw-seW"/>
+                        <outlet property="label1" destination="Rr5-ZJ-OEp" id="W47-hW-YTp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="27"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="qXI-YL-bq9">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Ux8-gp-gkz" customClass="HomeViewController" customModule="MyFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8jX-Lc-Xu6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0cQ-Id-GGd"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsq-Gb-eN7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="770"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HYb-E1-tkP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ePT-qw-gqb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7b0-om-nlx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mRw-hI-cZv" kind="relationship" relationship="rootViewController" id="aew-j8-GgE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kfg-tv-8Zc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281.15942028985512" y="-1353.3482142857142"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="02u-bv-aUH">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="0AY-gu-fqx">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="3bK-PX-Lcy">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="6kE-DR-cpU">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="IKT-Zu-pB4">
+            <size key="intrinsicContentSize" width="54" height="48"/>
+        </designable>
+        <designable name="Ij5-04-zIV">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="U60-XG-QVu">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="UGh-DQ-pVD">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="ezu-nA-yNj">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="iLp-3h-81x">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="yxM-Fh-3IE">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+    </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="VBM-j3-UDc"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="logo firebase icon" width="1600" height="1600"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
